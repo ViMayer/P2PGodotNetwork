@@ -35,26 +35,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="UsersContainer" type="VBoxContainer" parent="Panel/Container/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="UserCardsContainer" type="VBoxContainer" parent="Panel/Container/ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="UserLabelTemplate" type="Label" parent="Panel/Container/ScrollContainer/UsersContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 64)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "PLAYER NAME"
-vertical_alignment = 1
-
-[node name="Background" type="ColorRect" parent="Panel/Container/ScrollContainer/UsersContainer/UserLabelTemplate"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.5538657, 0.00023122012, 0.55703765, 1)

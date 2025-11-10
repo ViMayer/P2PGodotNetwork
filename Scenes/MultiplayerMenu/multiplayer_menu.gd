@@ -20,12 +20,13 @@ var instance_id: int:
 var server_address: String:
 	get: return server_address_input.text.strip_edges()
 
-
 var nickname: String:
 	get:
-		var prefix := "" if instance_id <= 0 else "("+str(instance_id)+") "
-		var input_value := nickname_input.text.strip_edges()
-		var value := prefix + ("Player" if not input_value else input_value)
+		var value := nickname_input.text.strip_edges()
+		if not value:
+			value = "Player"
+			# If using multiple debug instances it adds the instance id to the player name for easier debugging
+			if Global.instance_id > 0: value = "(" + str(Global.instance_id) + ") "+ value
 		return value
 
 var _disable_interactions: bool = false: # If true it won't be possible to interact with anything inside menu

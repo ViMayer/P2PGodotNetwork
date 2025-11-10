@@ -20,3 +20,4 @@ visible = false
 
 [node name="MultiplayerMenu" parent="." instance=ExtResource("2_5xqe6")]
 unique_name_in_owner = true
+_debug_auto_host_and_join = true
