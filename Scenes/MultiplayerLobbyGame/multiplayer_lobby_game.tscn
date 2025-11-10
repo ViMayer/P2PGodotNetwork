@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b27yf1lrqs88x"]
+
+[ext_resource type="Script" uid="uid://cvuicelhdb1k5" path="res://Scenes/MultiplayerLobbyGame/multiplayer_lobby_game.gd" id="1_y2gfk"]
+[ext_resource type="PackedScene" uid="uid://cms3qllgumd5t" path="res://Scenes/MultiplayerMenu/multiplayer_menu.tscn" id="2_5xqe6"]
+[ext_resource type="PackedScene" uid="uid://b706pub4ytmv8" path="res://Scenes/UsersList/users_list.tscn" id="2_lovx4"]
+
+[node name="MultiplayerLobbyGame" type="Node"]
+script = ExtResource("1_y2gfk")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UsersList" parent="." instance=ExtResource("2_lovx4")]
+unique_name_in_owner = true
+visible = false
+
+[node name="MultiplayerMenu" parent="." instance=ExtResource("2_5xqe6")]
+unique_name_in_owner = true

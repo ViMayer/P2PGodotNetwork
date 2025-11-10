@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b27yf1lrqs88x"]
+
+[ext_resource type="Script" uid="uid://cvuicelhdb1k5" path="res://MultiplayerLobbyGame/multiplayer_lobby_game.gd" id="1_y2gfk"]
+[ext_resource type="PackedScene" uid="uid://cms3qllgumd5t" path="res://MultiplayerMenu/multiplayer_menu.tscn" id="2_5xqe6"]
+
+[node name="MultiplayerLobbyGame" type="Node2D"]
+script = ExtResource("1_y2gfk")
+
+[node name="PlayersContainer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="MultiplayerMenu" parent="." instance=ExtResource("2_5xqe6")]
+unique_name_in_owner = true
